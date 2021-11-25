@@ -1,0 +1,287 @@
+
+*{margin: 0; padding: 0;}
+
+
+body{
+
+    font-family: cursive;
+    margin: 20px 0px;
+    background-image: url(".././imagens/fundogame.png");
+
+
+}
+
+
+.sobre{color: white;
+       margin-right:200px;
+       text-shadow: 0.1em 0.1em #800000;           
+       font-size:30px;}
+
+.ender{margin-left:300px;
+       color:white;
+       font-size:12px;
+       font-family: arial;}
+
+table{ border:0;
+       width:100%;
+       text-align:center;
+       color:white;
+       border:10px;
+
+}
+
+.Menu {
+    margin: 0 auto;
+    width: 1080px;
+    padding: 0;
+}
+
+.Menu ul {
+    margin:0;
+    padding:0;
+    line-height:30px;
+}
+
+.Menu li {
+    margin:0;
+    padding:0;
+    list-style:none;
+    float:left;
+    position:relative;
+    background:white;
+}
+
+.Menu ul li a {
+    text-align:center;
+    font-family:cursive;
+    font-size:30px;
+    text-decoration:none;
+    height:50px;
+    width:250px;
+    display:block;
+    color:black;
+    border:1px solid #800000;
+    text-shadow:1px 1px 1px #000;
+}
+
+.Menu ul ul {
+    position:absolute;
+    visibility:hidden;
+    top:50px;
+    margin:0 auto;
+}
+
+.Menu ul li:hover ul {
+    visibility:visible;
+
+
+}
+
+
+.Menu li:hover {background:#333; 
+                color:#fff; 
+                -moz-box-shadow:0 3px 10px 0 #CCC; 
+                -webkit-box-shadow:0 5px 10px 0 #800000; 
+                text-shadow:0px 0px 5px #fff;	
+}
+
+
+.Menu ul li:hover ul li a:hover {
+    background:#333; 
+    color:#fff; 
+    -moz-box-shadow:0 3px 10px 0 #CCC; 
+    -webkit-box-shadow:0 5px 10px 0 #800000; 
+    text-shadow:0px 0px 5px #fff;	
+}
+
+.Menu a:hover {
+    background:#333; 
+    color:#fff; 
+    -moz-box-shadow:0 3px 10px 0 #CCC; 
+    -webkit-box-shadow:0 5px 10px 0 #800000; 
+    text-shadow:0px 0px 5px #fff;	
+}
+
+.clearFloat {
+    clear:both;
+    margin:0;
+    padding:0;
+}
+
+
+
+
+
+figcaption{
+    color:orange;
+}
+
+div{text-align:center;
+    color: orange;
+}
+
+p{margin-left:100px;
+  font-size: 20px;}
+
+.dic{margin-left:100px;
+     text-decoration:none;
+     list-style:none;
+     text-shadow:0px 0px 1px white;
+}
+
+.info{color: white;
+      margin-right:200px;
+      text-shadow: 0.1em 0.1em #800000;}
+
+.cop{color: white;
+     text-align:center;
+     font-size: 20px}
+
+
+h1{	font-family: cursive;
+    color: white;
+    margin-right:200px;
+    text-shadow: 0.1em 0.1em #800000;;	
+}
+h2{	font-family: cursive;
+    color: white;
+    margin-right:200px;
+    text-shadow: 0.1em 0.1em #800000;;
+}
+
+
+.textto{float:left;
+}
+.dir{float:right	
+}
+
+.direito{color:orange;
+         clear:right;
+         text-indent:1cm;
+}
+.esquerdo{color:orange;
+          clear:left;
+          text-indent:1cm;}
+
+h1,h2,p{text-align:justify; }
+
+hr{border:2px solid;
+   border-color:orange;
+}
+.topo{
+    float: right;
+    margin-right:70px;
+}
+
+.cadastro{margin: 14px;
+          text-align:justify;
+          font-size:14pt;
+          text-indent:1cm;
+          color:white;
+}
+
+.titu{margin-top:20px;
+      text-align:center;
+      font-size:18pt;
+}
+
+.blok{font-size:16pt;
+      color:white;
+      text-align: left;
+      text-shadow: 0.1em 0.1em #800000}
+
+.volt{text-align:center;}
+
+.formul{margin-top:40px;
+        text-align:center;
+        font-size:20px;
+        font-weight:bold;
+        color:white;
+}
+.tamanho{width:800px;
+         text-align:center;
+         margin-left:300px;
+}
+
+
+.menu	{font-family: cursive;
+       color: white;
+       margin-right:200px;
+       text-shadow: 0.1em 0.1em green;;
+
+}
+
+.tamanho_menu{width:500px;
+              text-align: center;
+              margin-left:300px;
+}
+
+.tam{color: white;
+     margin-right:200px;
+     text-shadow: 0.1em 0.1em #800000;
+     background-color: gray;}
+
+.doceSalgada{
+    text-align: center;
+
+}
+
+.jumbotron {
+    padding: 2rem 1rem;
+    margin-bottom: 2rem;
+    background-color: #696969;
+    border-radius: 0.3rem;
+}
+
+@media (min-width: 576px) {
+    .jumbotron {
+        padding: 1rem 2rem;
+    }
+}
+
+.jumbotron-fluid {
+    padding-right: 0;
+    padding-left: 0;
+    border-radius: 0;
+}
+
+.galeria{
+    margin: 50px auto;
+    width: 780px;
+    height: 470px;
+    position: relative;
+    overflow: hidden
+}
+
+.foto{
+    position: absolute;
+    opacity: 0;
+    width: 780px;
+    height: 470px;
+    animation-name: animacao;
+    animation-duration: 30s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes animacao{
+    25%{
+        opacity: 1;
+
+    }
+    50%{ opacity: 0;        
+    }
+}
+.foto:nth-child(1){
+
+}
+.foto:nth-child(2){
+    animation-delay: 5s; 
+}
+.foto:nth-child(3){
+    animation-delay: 10s; 
+}
+.foto:nth-child(4){
+    animation-delay: 15s; 
+}
+
+
