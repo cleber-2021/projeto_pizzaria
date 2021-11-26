@@ -89,7 +89,9 @@
     	$usuario = $_SESSION['nomeUsuario'];
     	$consulta = mysqli_query($conn, "SELECT C.NOME FROM  CLIENTE C, AUTENTICACAO A WHERE A.NOME_USUARIO = '$usuario' AND C.ID_CLI = A.ID_CLI");
     	$registro = mysqli_fetch_array($consulta);    	
-
+      /**
+       * Busca o usuário que esta logado no site, para chamalo pelo nome. 
+       */
         echo "<html><p> <h2 class='doceSalgada'>Bem vindo(a) ". $registro['NOME']. " </h2></p>"
         . "<form action='logout.php' method='post'>
                 
@@ -111,9 +113,13 @@
     </thead>    
 
      <?php
+     /**
+      * Realiza uma consulta no banco, para buscar todos os sabores cadastrados na categoria doce,
+      * e apresentar para o cliente a opção de de realizar o pedido.
+      */
     $consulta = mysqli_query($conn, "SELECT * FROM SABOR WHERE tipo_sabor = 'Doce'");
     while ($registro = mysqli_fetch_array($consulta)){ ?>
- <form method="post" action="pegadadosPedido.php">
+     <form method="post" action="pegadadosPedido.php">
     <tr>
       <td><?php echo $registro['id_sabor']; ?></td>
       <td><?php echo $registro['nome_sabor']; ?></td>

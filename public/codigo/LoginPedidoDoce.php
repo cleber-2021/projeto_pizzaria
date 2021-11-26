@@ -95,7 +95,6 @@
 
 
 
-      <section>...</section>
       <footer class="my-5 pt-5 text-muted text-center text-small">
       &copy; Cléber Rocha - Game of Pizzas - projeto PHP/HTML - 2021
          </footer>

@@ -177,6 +177,8 @@
 
 <?php 
 
+
+
     $consu = mysqli_query($conn, "select tamanho, tipo_sabor from backup_pedido");
     $broto = 0;
     $pequena = 0;
