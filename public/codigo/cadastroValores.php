@@ -150,7 +150,7 @@
 
     <tr>
       <td><?php echo $registro['descricao']; ?></td>
-      <td><?php echo $registro['valor']; ?></td>
+      <td><?php echo 'R$ '. number_format((float)$registro['valor'],2,'.',''); ?></td>
       <td>
       <?php echo '<form method="post" action="cadastroValores.php">';
                   echo '<input type="hidden" name="codigo" value="'.$registro['id_valor'].'"/>';    

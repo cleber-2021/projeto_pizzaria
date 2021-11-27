@@ -39,6 +39,8 @@
                 <?php
                 //Iniciar uma seção, verifica se o usuario logado é administrador, 
                 //dependendo do usuário ele é cliente ou administrador do site
+                //Por padrão o script de criação das tabelas no banco, consta com insert com usuario administrador
+                //com usuário=adm senha=voale@123
                     session_start();
                     if (isset($_SESSION['nomeUsuario'])){     
                      if($_SESSION['nomeUsuario']=='adm'){

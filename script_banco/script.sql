@@ -61,3 +61,20 @@ ingredientes_sabor varchar (300),
 tipo_sabor varchar (50),
 primary key (id_backup_sabor) 
 );
+
+insert into cliente(nome)value('administrador');
+insert into autenticacao(id_cli, nome_usuario, senha) value((select id_cli from cliente where nome = 'administrador'),'adm','voale@123');
+
+insert into sabor (nome_sabor, ingredientes_sabor, tipo_sabor) values ("Prestigio", "chocolate, coco ralado", "Doce");
+insert into sabor (nome_sabor, ingredientes_sabor, tipo_sabor) values ("Morango", "chocolate, leite condensado, morango", "Doce");
+insert into sabor (nome_sabor, ingredientes_sabor, tipo_sabor) values ("Brigadeiro", "Brigadeiro, cereja", "Doce");
+insert into sabor (nome_sabor, ingredientes_sabor, tipo_sabor) values ("Calabresa", "queijo, molho de tomate, calabresa em rodelas, cebola, tomate picado, azeite e orégano. ", "Salgada");
+insert into sabor (nome_sabor, ingredientes_sabor, tipo_sabor) values ("Frango com catupiry", "Queijo muçarela, frango, catupiry, sálvia e molho de tomate", "Salgada");
+
+insert into sabor (nome_sabor, ingredientes_sabor, tipo_sabor) values ("Muçarela", "Queijo muçarela em abundância, molho de tomate fresco, azeitona, rodelas de tomate e orégano!", "Salgada");
+insert into valores(descricao, valor) values ("Broto", 10.00);
+insert into valores(descricao, valor) values ("Pequena", 20.00);
+insert into valores(descricao, valor) values ("Média", 45.00);
+insert into valores(descricao, valor) values ("Grande", 50.00);
+insert into valores(descricao, valor) values ("Familia", 65.00);
+

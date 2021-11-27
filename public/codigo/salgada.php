@@ -42,6 +42,9 @@
                              <a class='nav-link' href='.././codigo/cadastro.php'>Novo Sabor<span class='sr-only'>(current)</span></a>
                           </li>
                           <li class='nav-item'>
+                             <a class='nav-link' href='.././codigo/cadastroValores.php'>Editar Valores<span class='sr-only'>(current)</span></a>
+                          </li>
+                          <li class='nav-item'>
                              <a class='nav-link' href='.././codigo/acompanharPedido.php'>Acompanhar Pedido<span class='sr-only'>(current)</span></a>
                           </li>";
                          }
@@ -156,9 +159,9 @@
 <div class="container">
           <p class="text-justify"><h4> Valores:</h4>
           <?php
-                $Valores = mysqli_query($conn, "SELECT id_valor, descricao, concat('R$ ' ,valor) as valor FROM valores");
+                $Valores = mysqli_query($conn, "SELECT id_valor, descricao,  valor FROM valores");
                 while ($reg = mysqli_fetch_array($Valores)){
-                  echo '<h5>'.$reg['descricao'].' = '.$reg['valor'];
+                  echo '<h5>'.$reg['descricao'].' = ' . 'R$ '. number_format((float)$reg['valor'],2,'.','');
 
                 }?>
           </p>

@@ -122,15 +122,16 @@
         <th>Endereço</th>
         <th>Bairro</th>
         <th>Valor total</th>
-         <th colspan="2">Andamento</th>
+         <th colspan="1">Andamento</th>
          <th colspan="1">Ação</th>
+         <th>Imprimir Pedido</th>
       </tr>
     </thead>    
 
      <?php 
 
     $consulta = mysqli_query($conn, "select p.id_pedido, p.tamanho,s.nome_sabor, c.nome, c.endereco,
-                                               c.bairro,concat('R$ ',p.valor_total) as valor, s.tipo_sabor,
+                                               c.bairro, p.valor_total as valor, s.tipo_sabor,
                                                p.andamento
                                                from pedido p, cliente c, sabor s
                                                where p.id_cli = c.id_cli
@@ -145,7 +146,7 @@
       <td><?php echo $registro['nome']; ?></td>
       <td><?php echo $registro['endereco']; ?></td>
       <td><?php echo $registro['bairro']; ?></td>
-      <td><?php echo $registro['valor']; ?></td>
+      <td><?php echo 'R$ '.number_format((float)$registro['valor'],2,'.',''); ?></td>
       <td>
           <?php 
               echo '<form method="post" action="alteraPedido.php">';
@@ -165,12 +166,30 @@
           <?php 
               echo '<form method="post" action="excluiPedido.php">';
               echo '<input type="hidden" name="codigo" value="'.$registro['id_pedido'].'"/>';    
+              echo '<br>';
               echo '<input type="submit" value="Já foi entregue" name="del"/>';
               echo '</form>';
           ?>
       </td>
+      <td>
+        <?php
+          echo '<form method="post" action="relatorio.php">';
+          echo '<br>';
+          echo '<input type="hidden" name="codigo" value="'.$registro['id_pedido'].'"/>';
+          echo '<input type="hidden" name="sabor" value="'.$registro['nome_sabor'].'"/>';
+          echo '<input type="hidden" name="nome" value="'.$registro['nome'].'"/>';
+          echo '<input type="hidden" name="bairro" value="'.$registro['bairro'].'"/>';
+          echo '<input type="hidden" name="valor" value="'.'R$ '.number_format((float)$registro['valor'],2,'.','').'"/>';
+          echo '<input type="hidden" name="tamanho" value="'.$registro['tamanho'].'"/>';
+          echo '<input type="hidden" name="endereco" value="'.$registro['endereco'].'"/>';
+          echo '<input type="hidden" name="andamento" value="'.$registro['andamento'].'"/>';
+          echo '<input type="submit" value="Imprimir" class="btn btn-primary mb-2">';
+          echo '</form>';
+      ?>
+    </td>
     </tr>
 
+    
     <?php
       } ?> 
   </table>
@@ -205,6 +224,8 @@
           $salgada++; 
 
     }?>
+
+
 
 <br>
 <div class="container">

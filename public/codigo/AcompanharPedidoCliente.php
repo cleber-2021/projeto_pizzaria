@@ -130,7 +130,7 @@
      if (isset($_SESSION['nomeUsuario'])){
           $cliente = $_SESSION['id_cli'];
           $consulta = mysqli_query($conn, "select p.id_pedido, p.tamanho,s.nome_sabor, c.nome, c.endereco,
-                                               c.bairro,concat('R$ ',p.valor_total) as valor, s.tipo_sabor, andamento
+                                               c.bairro, p.valor_total as valor, s.tipo_sabor, andamento
                                                from pedido p, cliente c, sabor s
                                                where p.id_cli = c.id_cli
                                                and c.id_cli = ". $cliente ."
@@ -146,7 +146,7 @@
     <tr>
       <td><?php echo $registro['nome_sabor']; ?></td>
       <td><?php echo $registro['tamanho'];?></td>
-      <td><?php echo $registro['valor']; ?></td>
+      <td><?php echo 'R$ '.number_format((float)$registro['valor'],2,'.',''); ?></td>
       <td><?php echo $registro['andamento'];?></td>
     </tr>
 
