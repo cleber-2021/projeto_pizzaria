@@ -62,6 +62,8 @@ tipo_sabor varchar (50),
 primary key (id_backup_sabor) 
 );
 
+/*insert com informações para testes do site*/
+
 insert into cliente(nome)value('administrador');
 insert into autenticacao(id_cli, nome_usuario, senha) value((select id_cli from cliente where nome = 'administrador'),'adm','voale@123');
 
