@@ -85,7 +85,7 @@
     <br>
     <div class="container">
         <div>
-            <h1>Bem vindo!</h1>
+            <h1>Bem-vindo!</h1>
             <br>
             <p>A Pizzaria Game of Pizzas trabalha desde o tempo dos dragões, com os melhores sabores de Westeros.<br>
                 Além de ter um atendimento personalizado, entregamos até além da muralha.<br></p>

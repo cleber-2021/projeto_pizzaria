@@ -91,7 +91,7 @@
       $consulta = mysqli_query($conn, "SELECT C.NOME FROM  CLIENTE C, AUTENTICACAO A WHERE A.NOME_USUARIO = '$usuario' AND C.ID_CLI = A.ID_CLI");
       $registro = mysqli_fetch_array($consulta);      
 
-        echo "<html><p> <h2 class='doceSalgada'>Bem vindo(a) ". $registro['NOME']. " </h2></p>"
+        echo "<html><p> <h2 class='doceSalgada'>Bem-vindo(a) ". $registro['NOME']. " </h2></p>"
         . "<form action='logout.php' method='post'>
                 
                 </form>";

@@ -95,7 +95,7 @@
       /**
        * Busca o usuário que esta logado no site, para chamalo pelo nome. 
        */
-        echo "<html><p> <h2 class='doceSalgada'>Bem vindo(a) ". $registro['NOME']. " </h2></p>"
+        echo "<html><p> <h2 class='doceSalgada'>Bem-vindo(a) ". $registro['NOME']. " </h2></p>"
         . "<form action='logout.php' method='post'>
                 
                 </form>";
